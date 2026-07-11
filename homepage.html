@@ -1,126 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-gb">
+
 <head>
-<style>
-body {background-color: WhiteSmoke;}
-h1   {font-family:verdana; text-align:center;}
-p    {font-family:verdana; margin-left: 50px;}
-a    {font-family:verdana; margin-left: 80px;}
-.content-box  {
-	background-color: #ffffff; /* White box */
-	width:60%; 
-	margin:auto;
-	padding: 30px;
-	box-shadow: 9px 12px 53px 3px rgba(0, 0, 0, 0.16);
-	border-radius: 5px;
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
 
-}
+        .main_div {
+            background-color: white;
+            width: 80%;
+            margin: auto;
 
-.search-box{
-background-color: WhiteSmoke; /* White box */
-	width:60%; 
-	margin:auto;
-	padding: 30px;
-	box-shadow: 9px 12px 53px 3px rgba(0, 0, 0, 0.16);
-	border-radius: 0px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
 
-}
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
 
+        h1 {
+            /*header*/
+            font-family: Helvetica;
+            font-size: 300%;
+            text-align: center;
+        }
 
-form {
-        background-color: #F5F5F5;
-        width: 60%;
-        height: 44px;
-        border-radius: 5px;
-        display:flex;
-        flex-direction:row;
-        align-items:centre;
-      }
+        h2 {
+            /*header 2*/
+            font-family: Helvetica;
+            font-size: 120%;
+            font-weight: bold;
+        }
 
-input {
-        all: unset;
-        font: 16px system-ui;
-        color: #000000;
-        height: 100%;
-        width: 100%;
-        padding: 6px 10px;
-      }
-<!-- colour of text to begin with -->
-::placeholder {
-        colour: #ffffff;
-        opacity: 0.7; 
-      }
-
-svg {
-        color: #000000;
-        fill: currentColour;
-        width: 24px;
-        height: 24px;
-        padding: 10px;
-      }
-
-button {
-        all: unset;
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-      }
+        p {
+            /*paragraph*/
+            font-family: Helvetica;
+            font-size: 100%;
 
 
-</style>
+        }
+
+        ul {
+            /*List*/
+            font-family: Helvetica;
+            list-style-type: square;
+
+        }
+
+        /*search box code, it makes a search box that just takes you to a duck duck go page with your input text as the search*/
+        .search-box {
+           background-color: white;
+            width: 80%;
+            margin: auto;
+
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+
+        }
+
+
+        form {
+            background-color: #F5F5F5;
+            width: 100%;
+            height: 44px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: centre;
+        }
+
+        input {
+            all: unset;
+            font: 16px system-ui;
+            color: #000000;
+            height: 100%;
+            width: 100%;
+            padding: 6px 10px;
+        }
+
+
+        ::placeholder {
+            color: #6a6a6a;
+            opacity: 0.7;
+        }
+
+/*svg class*/
+        .search_symbol {
+            color: #000000;
+            fill: currentColour;
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+        }
+/*button class*/
+        .search_button {
+            all: unset;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+        }
+    </style>
 </head>
+
 <body>
+    <!--Header-->
+    <h1>Home Page</h1>
 
-<h1>HOME PAGE</h1>
+    <!--Search box-->
+    <div class="search-box">
+        <form id="form">
+            <input type="search" id="query" placeholder="Search...">
+            <button class="search_button">
+                <svg viewBox="0 0 1024 1024" class="search_symbol">
+                    <path class="path1"
+                        d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                    </path>
+                </svg>
+            </button>
+        </form>
+        <script>
+            const f = document.getElementById('form');
+            const q = document.getElementById('query');
+            const search_engine = 'https://duckduckgo.com/?q=';
 
-<div class="search-box">
-<form role="search" id="form">
-      <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
-      <button>
-        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
-      </button>
-    </form>
-    <script>
-      const f = document.getElementById('form');
-      const q = document.getElementById('query');
-      const google = 'https://duckduckgo.com/?q=';
+            function submitted(event) {
+                event.preventDefault();
+                const url = search_engine + '+' + q.value;
+                const win = window.open(url, '_blank');
+                win.focus();
+            }
 
-      function submitted(event) {
-        event.preventDefault();
-        const url = google + '+' + q.value;
-        const win = window.open(url, '_blank');
-        win.focus();
-      }
+            f.addEventListener('submit', submitted);
+        </script>
+    </div>
 
-      f.addEventListener('submit', submitted);
-    </script>
-</div>
-
-<!-- Spacer -->
-<div style="padding:20px;"></div>
-
-<div class="content-box">
-
-<p >Tools:</p>
-<a href="https://www.simscale.com/signin/">Simscale<br></a>
-<a href="https://phydemo.app/ray-optics/simulator/">Phydemo Ray Optics Simulator<br></a>
-<a href="https://www.desmos.com/scientific">Scientific Calculator<br></a>
-<a href="https://domycalculations.com/numerical-analysis/parametric-equation-calculator/">Parametric to Cartesian Converter<br></a>
-<a href="https://duck.ai/">Duck AI<br></a>
-<a href="https://energy2d.intofuture.org/view/krknBVBUwel7QB6i1WYa">2D Thermal Sim<br></a>
-<a href="https://www.w3schools.com/tools/tool_css_shadow.php">CCS Box Shadow Generator<br></a>
-<a href="https://tableizer.journalistopia.com/">Spreadsheet to html<br></a>
+    <!-- Spacer -->
+    <div style="padding:20px;"></div>
 
 
-<p>Important Links:</p>
-<a href="https://www.engineersedge.com/hardware/metric-internal-thread-sizes2.htm">Internal threads M25 - M50<br></a>
-<a href="https://www.engineersedge.com/hardware/metric-internal-thread-sizes1.htm">Internal Metric Thread and Fastener Sizes M 9 - M 24<br></a>
-<a href="https://www.w3schools.com/howto/howto_js_sort_table.asp">How to sort a table in HTML<br></a>
-<a href="screwsizes.html">Threads</a>
+    <div class="main_div">
+        <p>Welcome to my homepage <br></p>
+
+        <h2>Tools:</h2>
+        <ul>
+            <li><a href="https://www.desmos.com/scientific">Scientific Calculator</a></li>
+            <li><a href="https://duck.ai/">Duck AI</a> - if you must use AI this lets you use the main models without them tracking you</li>
+        </ul>
+
+        <h2>Cool websites:</h2>
+        <ul>
+            <li><a href="https://sentry.artificialisabel.com/">Satellite viewer<br></a></li>
+        </ul>
+
+        <h2>HTML Help:</h2>
+        <ul>
+            <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_default">HTML testing page</a> -
+                by
+                the HTML guys themselves</li>
+            <li><a href="https://www.w3schools.com/tools/tool_css_shadow.php">CCS Box Shadow Generator</a></li>
+            <li><a href="https://tableizer.journalistopia.com/">Spreadsheet to html</a></li>
+            <li><a href="https://freefrontend.com/"> Collection of demo code</a></li>
+        </ul>
+
+        <h2>Physics sims</h2>
+        <ul>
+            <li><a href="https://phydemo.app/ray-optics/simulator/">Phydemo Ray Optics Simulator</a></li>
+            <li><a href="https://energy2d.intofuture.org/view/krknBVBUwel7QB6i1WYa">2D Thermal Sim</a></li>
+        </ul>
 
 
-</div>
-
+    </div>
 
 </body>
+
 </html>
