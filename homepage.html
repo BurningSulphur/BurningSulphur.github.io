@@ -68,7 +68,7 @@
         }
 
 
-        form {
+        .search_box_form {
             background-color: #F5F5F5;
             width: 100%;
             height: 44px;
@@ -78,7 +78,7 @@
             align-items: centre;
         }
 
-        input {
+        .search_box_input {
             all: unset;
             font: 16px system-ui;
             color: #000000;
@@ -101,7 +101,7 @@
             height: 24px;
             padding: 10px;
         }
-/*button class*/
+
         .search_button {
             all: unset;
             cursor: pointer;
@@ -117,8 +117,8 @@
 
     <!--Search box-->
     <div class="search-box">
-        <form id="form">
-            <input type="search" id="query" placeholder="Search...">
+        <form class="search_box_form" id="form">
+            <input class="search_box_input" type="search" id="query" placeholder="Search...">
             <button class="search_button">
                 <svg viewBox="0 0 1024 1024" class="search_symbol">
                     <path class="path1"
@@ -131,6 +131,7 @@
             const f = document.getElementById('form');
             const q = document.getElementById('query');
             const search_engine = 'https://duckduckgo.com/?q=';
+            // for google search without all the extra nonsense that google adds now use https://www.google.com/search?q=%s&udm=14
 
             function submitted(event) {
                 event.preventDefault();
@@ -146,6 +147,7 @@
     <!-- Spacer -->
     <div style="padding:20px;"></div>
 
+    <!--Main Body-->
 
     <div class="main_div">
         <p>Welcome to my homepage. In the early days of the internet your home page was meant to be your own and not a generic search engine. Instead of search engines there would be lists of links you would navigate by. I keep a copy of this website in a folder on my desktop and set it as the homepage in my browser, then when I find something cool I add to it. You are welcome to copy this page to make it your own, but I recommend just making one yourself by making a txt file, renaming it homepage.html and starting <a href="https://www.w3schools.com/html/html_intro.asp"> here</a><br></p>
