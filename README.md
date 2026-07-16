@@ -1,4 +1,4 @@
 # BurningSulphur.github.io
 Simple HTML website
 
-link to view: https://burningsulphur.github.io/homepage
+link to view: https://burningsulphur.github.io/
