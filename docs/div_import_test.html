@@ -1,17 +1,92 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <style>
+        body {
+            background-color: whitesmoke;
+            /*important part of this test*/
+        }
+
+        h1 {
+            /*header*/
+            font-family: Helvetica;
+            font-size: 200%;
+            text-align: left;
+        }
+
+        .main_div {
+            background-color: white;
+            width: 80%;
+            margin: auto;
+
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
 <body>
 
-    <h1>using embed</h1>
-    <embed type="text/html" src="test.html" width="100%">
+    <p>
+        if you use the body as the imported div, when imported the background around the div won't be correct <br>
+        if you use a div ontop of a body that matches the background of the page then the div will be slightly smaller
+        than normal<br>
+        this can be fixed by making the body { margin: 0 } in css. <br>
+        to make sure the backgrounds match you can make the body background transparent in the imported div file
 
-    <h1>using iframe</h1>
-    <iframe src="test.html" width="100%" style="border:none;"> </iframe>
+    </p>
+    <h1>
+        Intended appearance:
+    </h1>
+    <div class="main_div">
+        <p>
+            Just testing if you can import divs
+        </p>
+    </div>
 
-    <h1> using object </h1>
-    <object data="test.html" width="100%"></object>
+    <h1>Using Embed</h1>
 
+    <a href="https://www.w3schools.com/tags/tag_embed.asp">Info Page</a>
+    <p>Using a div in the body</p>
+    <embed type="text/html" src="div_in_body.html" width="100%">
+    <p>
+
+    </p>
+
+    <h1>Using Iframe</h1>
+
+     <a href="https://www.w3schools.com/tags/tag_iframe.asp">Info Page</a>
+    <p>Using a div in the body</p>
+    <iframe src="div_in_body.html" width="100%" style="border:none;"> </iframe>
+
+    <h1> Using Object </h1>
+
+    <a href="https://www.w3schools.com/html/html_object.asp">Info Page</a>
+    
+    <p>Using a div in the body</p>
+    <object data="div_in_body.html" width="100%"></object>
+
+
+
+
+    <!-- This doesn't work as the background colour gets messed up and the issue with the div_in_body being smaller was solved
+    <p>Using the body as the div</p>
+    <embed type="text/html" src="body_as_div.html" width="100%">
+        -->
+            <!-- This doesn't work as the background colour gets messed up and the issue with the div_in_body being smaller was solved
+    <p>Using the body as the div</p>
+    <iframe src="body_as_div.html" width="100%" style="border:none;"> </iframe>
+    -->
+    <!-- This doesn't work as the background colour gets messed up and the issue with the div_in_body being smaller was solved
+    <p>Using the body as the div</p>
+    <object data="body_as_div.html" width="100%"></object>
+    -->
 </body>
 
 </html>

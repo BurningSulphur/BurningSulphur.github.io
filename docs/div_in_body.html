@@ -2,9 +2,14 @@
 <html lang="en-gb">
 
 <head>
-    <title>Navbar testing</title>
+    <title>Import div testing</title>
     <style>
-                .main_div {
+        .hidden_body {
+            margin: 0; /*fixes the div being slightly smaller*/
+            background-color: transparent; /*this is the default but I'm making sure that it is*/
+        }
+
+        .imported_div {
             background-color: white;
             width: 80%;
             margin: auto;
@@ -19,8 +24,9 @@
         }
     </style>
 </head>
-<body>
-    <div class="main_div">
+
+<body class="hidden_body">
+    <div class="imported_div">
         <p>
             just testing if you can import divs
         </p>
